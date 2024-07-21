@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot search bar</title>
+    <link ref="chat.py"></link>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <style>
+    body,html{
+        height: 100%;
+        margin: 0;
+        background: rgb(140, 151, 195);
+       background: -webkit-linear-gradient(to right, rgb(55, 59, 34), rgb(66, 70, 54)40), rgb(32, 32, 43);
+        background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78));
+    }
+
+    gif {
+        width: 500px; /* adjust the width as needed */
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    
+           
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2415ec45;
+        }
+        body {
+            background-image: url("background\ image.jpg");
+            background-size: cover; /* scale the image to cover the entire background */
+          }
+          
+          .chat-container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #query {
+            width: 75%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        #ask-btn {
+            width: 23%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+       
+        
+        
+          
+
+        
+        #search-container {
+            text-align: center;
+        }
+
+
+        #search-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        #search-button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: rgb(100,100,100);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        
+    </style>
+</head>
+
+<head>
+	<title>GIF Example</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<head>
+    <link rel="icon" type="image/x-icon" href="images.ico">
+  </head>
+  
+<body>
+	<img src="bot.gif" id="gif">
+	
+	<script src="script.js"></script>
+</body>
+
+
+
+
+
+<body>
+    
+    <div id="search-container">
+        <div class="img_cont">
+            <div id="response"></div>
+
+            <span class="online_icon"></span>
+            <body background="background image.jpg">
+                <!-- page content -->
+              </body>
+              
+        </div>
+        <input type="text" id="search-input" placeholder="Search here">
+        <button id="search-button" onclick="performSearch()">Enter</button>
+        
+    </div>
+    
+      </div>
+      
+    
+
+    <script>
+        function performSearch() {
+            var searchTerm = document.getElementById('search-input').value;
+            if (searchTerm.trim() !== '') {
+                var searchUrl = 'HI' + encodeURIComponent(searchTerm);
+                window.location.href = searchUrl;
+            }
+        }
+        
+
+
+        const questions = [{
+            "question": "What is the capital of France?",
+            "answer": "Paris"
+        },
+        {
+            "question": "What is the largest planet in our solar system?",
+            "answer": "Jupiter"
+        },
+        {
+            "question": "Who wrote Romeo and Juliet?",
+            "answer": "William Shakespeare"
+        },
+        {
+            "question":"Hi",
+            "answer":"Hello,How can i help you"
+        },
+        {
+            "question":"What is your Name?",
+            "answer":"My Name is Chitti"
+        },
+        {
+            "question":"Tell me a joke.",
+            "answer":"Why did Saint Peter install a new gate at the Pearly Gates? Because it was a heavenly idea!"
+        },
+        
+        
+         {
+            "question":"Im not feeling well.",
+            "answer":"what happened suddenly"
+        },
+        
+         {
+            "question":"No one likes me",
+            "answer":"But i like u, wont u consider me as ur dear friend"
+        },
+        
+         {
+            "question":"remind me to medicine",
+            "answer":"Sure!! can I know the exact time!"
+        },
+        
+         {
+            "question":"can u play 90's song for me",
+            "answer":"Here u go,hope u like it"
+        },
+        
+         {
+            "question":"Tell me Mahabharatha story",
+            "answer":"From which part you want to here"
+        },
+        
+    ]; // paste the questions array from your code
+
+const chatContainer = document.querySelector('.chat-container');
+const queryInput = document.querySelector('#query');
+const askBtn = document.querySelector('#ask-btn');
+const responseDiv = document.querySelector('#response');
+
+askBtn.addEventListener('click', () => {
+	const query = queryInput.value.trim().toLowerCase();
+	const answer = searchAndProvideInfo(query);
+	responseDiv.innerText = answer;
+});
+
+function searchAndProvideInfo(query) {
+	// paste the search_and_provide_info function from your code
+    def search_and_provide_info(query):
+    for question in questions:
+        if query.lower() == question["question"].lower():
+            return question["answer"]
+    return "No relevant information found."
+}
+const responseDiv = document.getElementById('response');
+responseDiv.innerText = 'Your output here';
+
+
+    </script>
+</body>
+</html>
